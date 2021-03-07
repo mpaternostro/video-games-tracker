@@ -1,4 +1,7 @@
-import App from "./App.svelte";
+import dotenv from "dotenv";
+import App from "./components/App.svelte";
+
+dotenv.config();
 
 let app = new App({
   target: document.body,

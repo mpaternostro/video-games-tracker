@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "snowpack dev",
+    "start": "snowpack dev --polyfill-node",
     "build": "npx eslint ./src && snowpack build",
     "test": "npm run test:unit && npm run test:e2e",
     "test:unit": "jest --coverage src",
