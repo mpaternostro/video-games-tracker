@@ -3,3 +3,4 @@ build
 node_modules
 coverage
 .env
+src/constants/index.js

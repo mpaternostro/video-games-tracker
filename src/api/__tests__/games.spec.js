@@ -1,5 +1,5 @@
-import "dotenv/config";
-import { fetchGames, fetchGameById } from "./games";
+import { RAWG_API_KEY } from "../../constants";
+import { fetchGames, fetchGameById } from "../games";
 
 beforeEach(() => {
   global.fetch = jest.fn();
@@ -19,9 +19,7 @@ describe("fetch games", () => {
     fetchGames();
 
     expect(global.fetch).toHaveBeenCalledTimes(1);
-    expect(global.fetch).toHaveBeenCalledWith(
-      `https://api.rawg.io/api/games?key=${process.env.RAWG_API_KEY}`
-    );
+    expect(global.fetch).toHaveBeenCalledWith(`https://api.rawg.io/api/games?key=${RAWG_API_KEY}`);
   });
 
   it("should fetch a specific game", () => {
@@ -29,7 +27,7 @@ describe("fetch games", () => {
 
     expect(global.fetch).toHaveBeenCalledTimes(1);
     expect(global.fetch).toHaveBeenCalledWith(
-      `https://api.rawg.io/api/games/3498?key=${process.env.RAWG_API_KEY}`
+      `https://api.rawg.io/api/games/3498?key=${RAWG_API_KEY}`
     );
   });
 
