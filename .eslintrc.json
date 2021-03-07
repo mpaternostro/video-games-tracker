@@ -1,5 +1,5 @@
 {
-  "plugins": ["svelte3"],
+  "plugins": ["svelte3", "jest"],
   "extends": ["eslint:recommended"],
   "parser": "babel-eslint",
   "parserOptions": {
@@ -8,6 +8,7 @@
     "allowImportExportEverywhere": true
   },
   "env": {
+    "jest/globals": true,
     "es6": true,
     "browser": true,
     "node": true
