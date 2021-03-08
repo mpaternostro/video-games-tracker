@@ -1,10 +1,19 @@
 <script>
+  import { Router, Route } from "svelte-navigator";
+  import Nav from "./Nav.svelte";
+  import Home from "./Home.svelte";
+  // import About from "./About.svelte";
 </script>
 
-<div class="App">
-  <header class="App-header" />
-  hola
-</div>
+<Router>
+  <Nav />
+  <div>
+    <Route path="/">
+      <Home />
+    </Route>
+    <!-- <Route path="about" component={About} /> -->
+  </div>
+</Router>
 
 <style>
 </style>
