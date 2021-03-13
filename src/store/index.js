@@ -1,4 +1,4 @@
 import { writable } from "svelte/store";
-import { fetchGames } from "../api/games";
+import { getGames } from "../services/games";
 
-export const games = writable(fetchGames());
+export const games = writable(getGames());
