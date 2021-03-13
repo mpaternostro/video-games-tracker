@@ -11,8 +11,8 @@
   {:then value}
     <!-- promise was fulfilled -->
     <ul class="games-list">
-      {#each value.results as { name, background_image }}
-        <GameCard {name} {background_image} />
+      {#each value.results as Game}
+        <GameCard {...Game} />
       {/each}
     </ul>
   {:catch error}
@@ -23,11 +23,14 @@
 
 <style>
   .root {
-    margin: 15px;
+    margin: 16px;
   }
   .games-list {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 </style>
