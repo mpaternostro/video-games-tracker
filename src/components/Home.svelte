@@ -4,7 +4,7 @@
 </script>
 
 <div data-testid="home" class="root">
-  <h1>Games</h1>
+  <h1 data-testid="home-title">Games</h1>
   {#await $games}
     <!-- promise is pending -->
     <p>waiting for the promise to resolve...</p>
